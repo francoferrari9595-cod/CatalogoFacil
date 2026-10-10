@@ -1,0 +1,58 @@
+CATÁLOGO FÁCIL V42 — MEJORAS SOBRE V41
+======================================
+
+Esta versión parte de V41. Conserva el editor Android/Windows y la publicación automática.
+
+NOVEDADES
+- Categorías editables desde Productos: cambiar nombre, filtrar y eliminar.
+- Si se elimina una categoría con productos, pregunta confirmación y esos productos quedan en “Sin categoría”.
+- Búsqueda de productos en el editor y en el catálogo público.
+- Productos públicos en cuadrícula: 2 columnas en móvil, 3 en tablet y 2 en escritorio amplio (adaptable al ancho).
+- Temas, tipografías y formas visuales que ya estaban en el editor se conservan.
+- Campos para Instagram, Facebook, TikTok y sitio web; los enlaces se muestran en el catálogo publicado.
+- Protección de publicación por contraseña por catálogo: primera publicación crea la contraseña (mínimo 8 caracteres); actualizaciones requieren esa misma contraseña. El slug/nombre público no se puede modificar con otra contraseña.
+- Panel de administración de catálogos con listado, activar/desactivar y eliminar.
+
+PUBLICAR EL FRONTEND
+1. Extraer el ZIP en una carpeta nueva.
+2. Ejecutar SUBIR_A_GITHUB.bat como en las versiones anteriores.
+3. Esperar que GitHub Actions finalice y abrir la página con Ctrl+F5.
+
+IMPORTANTE: ACTUALIZAR EL WORKER (UNA SOLA VEZ)
+El control de contraseña y el panel administrativo necesitan el nuevo código del Worker.
+1. Abrir Cloudflare Dashboard > Workers & Pages > catalogo-facil-publisher.
+2. Abrir Edit code y reemplazar el código por el archivo publisher/worker.js de este ZIP.
+3. Guardar y desplegar (Deploy).
+4. Confirmar que se conserva el binding KV existente con nombre CATALOGS. No crear otra KV ni borrar la actual.
+5. En Settings > Variables and Secrets, crear una variable secreta llamada ADMIN_KEY y asignarle una clave larga y privada. Guardarla en un lugar seguro; no publicarla ni compartirla con clientes.
+6. Guardar y volver a desplegar si Cloudflare lo solicita.
+
+PANEL ADMINISTRATIVO
+Abrir la URL de GitHub Pages seguida de ?admin=1. Por ejemplo:
+https://francoferrari9595-cod.github.io/CatalogoFacil/?admin=1
+Ingresar la clave que se configuró como ADMIN_KEY. Desde allí se puede listar, activar, desactivar o eliminar catálogos.
+
+CONTRASEÑAS Y CATÁLOGOS YA EXISTENTES
+- Los catálogos publicados por primera vez después de instalar este Worker quedan protegidos por contraseña.
+- Las versiones anteriores no almacenaban una contraseña de propietario. Al actualizar un catálogo legado por primera vez, la primera contraseña que se registre se convierte en la clave de ese catálogo. Conviene que el propietario haga esa primera actualización antes de compartir el enlace de edición con otra persona.
+- La contraseña no se guarda en el JSON del catálogo. En KV se almacena un hash con sal, no la contraseña en texto plano.
+- No perder la contraseña: no hay recuperación automática porque no se guarda en texto plano. El administrador puede eliminar un catálogo, pero no recuperar su contraseña.
+
+SEGURIDAD ADMINISTRATIVA
+La clave ADMIN_KEY es exclusiva del propietario y queda en Cloudflare como secreto del Worker. Nunca ponerla en src/main.tsx ni public/api-config.js.
+
+V46 - CONTROL DE VENCIMIENTOS Y COPIAS DE SEGURIDAD
+- El panel de administración muestra fecha de creación y vencimiento.
+- Permite asignar 2, 3 o 6 meses, elegir una fecha concreta o quitar el vencimiento.
+- Los catálogos vencidos se pausan en el publicador; el catálogo público avisa durante los 7 días previos al vencimiento.
+- Desde administración se puede descargar el JSON del catálogo.
+- El campo precio permite borrar el cero inicial mientras se escribe.
+- El botón Compartir de WhatsApp usa la ruta /share/<slug> del Worker, que genera metadatos Open Graph y sirve la imagen del comercio para la vista previa.
+
+IMPORTANTE PARA ACTUALIZAR:
+1. Publicar el contenido de publisher/worker.js en el Worker existente de Cloudflare y hacer Deploy.
+2. Conservar el binding KV CATALOGS y el secreto ADMIN_KEY tal como están. No crear otro KV ni cambiar el secreto.
+3. Publicar los archivos del sitio en GitHub Pages.
+4. Las fechas de vencimiento son aplicadas por el Worker al consultar el catálogo. La pausa ocurre automáticamente al alcanzar la fecha configurada.
+
+La compilación Vite no se pudo completar en el entorno de preparación porque no se pudieron instalar las dependencias. Se verificó la sintaxis de JavaScript del Worker y la integridad del ZIP.

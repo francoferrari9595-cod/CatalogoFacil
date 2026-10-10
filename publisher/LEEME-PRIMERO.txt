@@ -1,0 +1,25 @@
+PUBLICADOR DE CATALOGO FACIL - SIN WRANGLER
+
+Esta version NO instala Wrangler ni workerd en Windows.
+La configuracion del Worker se hace una sola vez desde el panel oficial de Cloudflare.
+
+Pasos:
+1. Ejecuta CONFIGURAR_PUBLICADOR.bat.
+2. Se abre Cloudflare y tambien publisher\worker.js.
+3. Crea un Worker.
+4. Copia el contenido de worker.js al editor del Worker.
+5. Crea una KV Namespace llamada CATALOGO_FACIL y vincula la variable CATALOGS.
+6. Deploy.
+7. Copia la URL workers.dev y pegala en la ventana de CONFIGURAR_PUBLICADOR.bat.
+8. Ejecuta SUBIR_A_GITHUB.bat.
+
+Después de esta configuracion, los usuarios finales NO necesitan tokens de GitHub,
+Cloudflare, PIN, ID ni login para publicar catalogos.
+
+CORRECCION V35
+El configurador ya no usa una expresion regular estricta para validar la URL.
+Acepta URLs HTTPS de workers.dev y tambien dominios personalizados de Cloudflare Workers.
+Tambien elimina automaticamente comillas y barras finales pegadas por accidente.
+
+
+V36: el configurador acepta cualquier URL HTTPS valida y ya no valida el texto workers.dev. El BAT queda abierto si ocurre un error.
