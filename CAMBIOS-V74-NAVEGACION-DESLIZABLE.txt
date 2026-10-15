@@ -1,0 +1,10 @@
+CATÁLOGO FÁCIL V74 — NAVEGACIÓN MÓVIL DESLIZABLE
+
+Base: V73. Se conserva el código y las funciones de la versión anterior.
+
+Cambios de esta versión:
+- En pantallas móviles, la fila de pestañas del editor ahora se desplaza horizontalmente. “Vista previa” queda a la derecha de “Publicar”; deslizar hacia la izquierda permite verla sin mandarla a una fila inferior.
+- La fila de acciones “Cargar de la nube”, “Guardar catálogo” y “Cargar catálogo” ahora se desplaza horizontalmente. “Cargar catálogo” queda a la derecha de “Guardar catálogo” y se alcanza deslizando.
+- No se modifican las funciones de publicación, carga ni almacenamiento; solo la disposición visual en pantallas móviles.
+
+Para publicar: subir el contenido del ZIP al mismo repositorio usado por la versión V73 y esperar la compilación habitual. No borrar el almacenamiento de Cloudflare.

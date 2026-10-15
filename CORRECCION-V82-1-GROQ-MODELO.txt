@@ -1,0 +1,8 @@
+CORRECCIÓN V82.1 — MODELO DE GROQCLOUD
+
+Se mantiene V82 como base y se modifica únicamente el identificador del modelo de IA en publisher/worker.js:
+- Antes: llama-3.3-70b-versatile (retirado para cuentas Developer/free desde el 16/08/2026).
+- Ahora: openai/gpt-oss-120b.
+
+No se cambió el nombre del secreto: debe seguir siendo GROQ_API_KEY.
+Después de subir el proyecto, hay que desplegar el Worker actualizado en Cloudflare para que la corrección tenga efecto. No borres ni reemplaces el almacenamiento CATALOGS ni otros secretos/bindings.

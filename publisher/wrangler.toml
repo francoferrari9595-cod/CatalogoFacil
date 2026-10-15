@@ -1,0 +1,9 @@
+name = "catalogo-facil-publicador"
+main = "worker.js"
+compatibility_date = "2026-10-08"
+workers_dev = true
+
+# El instalador completa el ID de esta KV automáticamente.
+[[kv_namespaces]]
+binding = "CATALOGS"
+id = "REEMPLAZAR_KV_ID"

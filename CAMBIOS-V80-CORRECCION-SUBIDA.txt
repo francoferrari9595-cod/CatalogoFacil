@@ -1,0 +1,12 @@
+V80 - Correccion del error de subida a GitHub
+
+El error "fatal: cannot stat ... .git/hooks/fsmonitor-watchman.sample: Filename too long" aparece cuando el proyecto se encuentra dentro de varias carpetas de versiones anidadas y Windows/Git no puede manejar la ruta resultante.
+
+El BAT de esta versión:
+- Actualiza el título, los mensajes y la verificación a V80.
+- Activa core.longpaths para Git.
+- Comprueba que la ruta del proyecto no sea excesivamente larga.
+- Si detecta una ruta demasiado larga, explica cómo extraerlo en C:\CatalogoFacilV80.
+- Conserva la verificación del contenido subido a GitHub.
+
+No elimina catálogos ni modifica el almacenamiento de Cloudflare. La corrección está centrada en el proceso de publicación.

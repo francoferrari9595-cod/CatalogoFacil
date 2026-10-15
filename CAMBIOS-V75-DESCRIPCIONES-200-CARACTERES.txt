@@ -1,0 +1,13 @@
+CATÁLOGO FÁCIL V75 — DESCRIPCIONES DE PRODUCTOS DE HASTA 200 CARACTERES
+
+Base: V74-NAVEGACION-DESLIZABLE. Esta actualización se aplica encima de la versión anterior y conserva sus funciones.
+
+Cambios:
+- El campo Descripción de cada producto admite hasta 200 caracteres.
+- El contador del editor muestra el progreso sobre 200 caracteres.
+- La normalización/importación del catálogo conserva hasta 200 caracteres en las descripciones de los productos.
+- La vista pública muestra hasta 200 caracteres de la descripción de cada producto.
+- La descripción general del negocio conserva su límite anterior de 100 caracteres.
+- Las respuestas generales de Gemini no quedan limitadas a 200 caracteres; el límite se aplica únicamente al campo de descripción del producto.
+
+Para publicar: extraer el ZIP y seguir las instrucciones de SUBIR_A_GITHUB.bat.

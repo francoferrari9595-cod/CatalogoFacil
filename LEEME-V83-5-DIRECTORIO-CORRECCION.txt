@@ -1,0 +1,22 @@
+CATÁLOGO FÁCIL V83.5 — CORRECCIÓN Y DIAGNÓSTICO DEL DIRECTORIO (base: V83.4, cambios hechos encima)
+
+QUÉ PASABA: el enlace "Ver todos los catálogos" abre la página del directorio, pero esa página pide la lista al Worker de
+Cloudflare. CONFIGURAR_PUBLICADOR.bat NO sube el Worker solo: solo guía el pegado manual. Si el Worker no se actualiza con
+publisher/worker.js, no existe la ruta /directory y la página no puede mostrar nada.
+
+LO NUEVO
+1) Pestaña PUBLICAR > botón "Comprobar directorio": dice con exactitud si el Worker está actualizado y si TU catálogo aparece;
+   si no aparece, dice el motivo (sin publicar, pendiente de aprobación, casilla de ocultar marcada, vencido, sin productos).
+2) La página del directorio ahora distingue: sin conexión / servidor sin actualizar / lista vacía, con tiempo límite de 12 s
+   (antes podía quedarse cargando) y botón Reintentar.
+3) Worker: un catálogo ya publicado antes de V83.4 ya no se oculta por no tener registrado el número de productos.
+   Nuevo parámetro /directory?check=<slug> para el diagnóstico.
+
+PASOS (una sola vez)
+ A. Cloudflare > Workers & Pages > tu Worker > Edit code > borrar todo y pegar el contenido de publisher/worker.js > Deploy.
+    (conserva la variable CATALOGS y el secreto ADMIN_KEY; no los toques)
+ B. Subir la web con SUBIR_A_GITHUB.bat, esperar GitHub Actions y Ctrl+F5.
+ C. En el editor: Publicar > "Comprobar directorio".
+ D. Los catálogos nuevos aparecen cuando el administrador los aprueba (estado activo).
+
+ARCHIVOS: src/Directory.tsx, src/main.tsx, publisher/worker.js.

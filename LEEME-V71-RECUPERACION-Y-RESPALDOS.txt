@@ -1,0 +1,22 @@
+CATALOGO FACIL V71 — RECUPERACION DEL EDITOR Y RESPALDOS
+
+BASE: V70. Esta versión conserva las funciones anteriores, incluida la consulta de Estudio IA por producto y la configuración de Gemini en Cloudflare.
+
+CAMBIOS:
+- Importación JSON sin filtros que descartaban productos o categorías con relaciones incompletas.
+- Mensajes de error más claros al leer un archivo JSON.
+- La carga desde la nube usa el modo editor para recuperar catálogos pendientes, desactivados o vencidos; esto no los publica ni cambia su estado público.
+- Exportación administrativa JSON con validación del respaldo y descarga compatible con navegadores móviles.
+- Incluye una copia recuperada del archivo de Pepperina's Indumentaria en RECUPERACION-PEPPERINAS/.
+
+RECUPERAR PEPPERINA'S:
+1. Descomprimí este ZIP.
+2. En el editor publicado, tocá Cargar catálogo / Cargar catálogo anterior.
+3. Seleccioná RECUPERACION-PEPPERINAS/PEPPERINAS-INDUMENTARIA-RESPALDO-RECUPERADO.json.
+4. Revisá productos e imágenes antes de publicar.
+5. Para actualizar el enlace existente, usá el slug pepperina-s-indumentaria y la contraseña original del catálogo.
+
+IMPORTANTE:
+- El archivo incluido es un respaldo normalizado preventivamente desde el JSON que se había compartido; no demuestra que el contenido remoto esté intacto. Revisá la cantidad de productos y las fotos antes de publicar.
+- Para que funcione la recuperación de catálogos bloqueados y la nueva exportación, actualizá publisher/worker.js en Cloudflare y hacé Deploy. Conservá los bindings CATALOGS y los secretos ADMIN_KEY y GEMINI_API_KEY; no los borres ni los pegues en GitHub.
+- Subí la aplicación web a GitHub con SUBIR_A_GITHUB.bat y esperá que finalice el workflow.

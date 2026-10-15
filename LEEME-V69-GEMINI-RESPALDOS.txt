@@ -1,0 +1,22 @@
+CATALOGO FACIL V69 - GEMINI SIN CLAVE PARA LOS USUARIOS + RESPALDOS JSON
+
+CAMBIOS
+- Estudio IA queda como un único cuadro para escribir una pregunta y una respuesta debajo; sin selectores de tarea ni estilo.
+- La clave de Gemini ya no se pide ni se guarda en el navegador del usuario. Las solicitudes pasan por el Worker de Cloudflare.
+- Se actualizó el modelo de Gemini a gemini-3.8-flash.
+- Se reforzó el botón Descargar JSON del Administrador de catálogos para navegadores móviles y escritorio.
+- Se mantiene como base el proyecto V68, incluidas las descripciones limitadas a 100 caracteres y cambios previos.
+
+CONFIGURAR GEMINI UNA SOLA VEZ (ADMINISTRADOR)
+1. Entrá al panel de Cloudflare y abrí el Worker que usa Catálogo Fácil.
+2. Settings > Variables and Secrets (o Variables de entorno y secretos).
+3. Agregá un Secret llamado exactamente GEMINI_API_KEY y pegá la clave de Google AI Studio como valor.
+4. Guardá y volvé a Deploy el Worker después de copiar publisher/worker.js de este ZIP.
+5. No pegues la clave en el código, no la subas a GitHub y no la distribuyas a los clientes.
+6. Publicá la web desde GitHub Actions. Los usuarios ya no necesitan introducir una API key.
+
+IMPORTANTE
+- La clave se configura una sola vez en Cloudflare; no está incluida en el ZIP ni expuesta al público.
+- Google puede aplicar límites de uso o cargos según la cuenta y sus condiciones; la aplicación no puede garantizar uso ilimitado gratuito.
+- El botón de respaldo necesita que el Worker actualizado esté desplegado y que la clave administrativa sea la correcta. En el panel de administración, ingresá la clave administrativa y luego usá Descargar JSON en la tarjeta del negocio.
+- Si un navegador móvil bloquea la descarga automática, revisá el aviso del navegador o la carpeta Descargas.

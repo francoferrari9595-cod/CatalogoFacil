@@ -1,0 +1,24 @@
+CATÁLOGO FÁCIL STUDIO — V60
+Cambios aplicados sobre el proyecto recibido V59. Se conservaron los archivos del publicador y sus configuraciones.
+
+1. PORTADA CENTRADA EN WINDOWS Y ANDROID
+- La imagen de portada fuerza centrado horizontal y vertical, tamaño cover y sin repetición.
+- El contenido de portada queda centrado dentro del espacio, sin posicionamiento lateral heredado.
+- El nombre del comercio se muestra como título principal y la descripción debajo, centrada y con tamaño limitado para que el título siempre tenga mayor jerarquía.
+
+2. ESTILOS DE TÍTULO
+Se agregaron 16 estilos configurables: sin efecto, sombra elegante, neón violeta, neón azul, neón rosa, 3D profundo, cromado, oro premium, contorno, resplandor, degradado, retro 3D, fuego, hielo, holográfico y relieve suave.
+
+3. PESTAÑA DISEÑO COMPACTA
+La pestaña Diseño ahora muestra accesos compactos. Al tocarlos se abre una ventana independiente para configurar temas, fuentes, estilos de título, formas, portada/tamaños y color de acento. Los controles no ocupan toda la pantalla principal del editor.
+
+4. FOTOS DE PRODUCTOS
+Se conserva el visor de fotos existente, incluidos los controles de zoom y el gesto de pellizcar en Android. No se añadió una etiqueta sobre la foto.
+
+5. PUBLICACIÓN Y WORKER
+No se modificó publisher/worker.js, las claves, los bindings de Cloudflare ni el almacenamiento KV. Estos cambios son del frontend; para verlos en la web hay que publicar los archivos en GitHub Pages. No hace falta hacer Deploy del Worker para estos cambios visuales.
+
+VALIDACIÓN
+- Se revisó la sintaxis TSX con TypeScript; no se detectaron errores de sintaxis, pero el chequeo no pudo resolver dependencias porque no están instaladas localmente.
+- npm install agotó el tiempo disponible, por lo que no se confirma una compilación completa de Vite en este entorno.
+- El Worker se mantiene sin cambios.

@@ -1,0 +1,14 @@
+CATÁLOGO FÁCIL V82 — CAMBIO DE GEMINI A GROQCLOUD
+
+Base de trabajo: V81. Se conserva la estructura y las funciones anteriores; se reemplaza el proveedor de IA del Worker por GroqCloud.
+
+CONFIGURACIÓN ÚNICA EN CLOUDFLARE
+1. Abrí Cloudflare → Workers & Pages → el Worker existente → Settings → Variables and Secrets.
+2. Agregá un secreto (Secret) llamado exactamente GROQ_API_KEY.
+3. Pegá tu clave privada de GroqCloud como valor y guardá. No pongas la clave en GitHub, en el frontend ni en un archivo del ZIP.
+4. Publicá el archivo publisher/worker.js con Deploy, conservando CATALOGS, ADMIN_KEY y todos los bindings existentes.
+5. Publicá el sitio desde GitHub usando SUBIR_A_GITHUB.bat.
+
+La interfaz ya no solicita ni muestra una clave al usuario. La conversación, las consultas por producto, la regeneración y la continuación siguen pasando por /ai/generate. El Worker usa el endpoint oficial OpenAI-compatible https://api.groq.com/openai/v1/chat/completions y el modelo openai/gpt-oss-120b.
+
+Nota: GroqCloud puede tener cuotas, límites, disponibilidad o cargos según la cuenta y las condiciones vigentes; no se garantiza uso ilimitado ni gratuidad permanente. No se incluye ninguna API key en este ZIP.

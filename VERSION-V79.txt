@@ -1,0 +1,4 @@
+CATALOGO FACIL V79
+Base: V78, conservando los archivos y modificaciones existentes.
+Correccion principal: BAT de publicacion con nombre/version actualizados, configuracion Git de rutas largas y deteccion de carpeta excesivamente anidada para evitar el error fsmonitor-watchman.sample: Filename too long.
+Extraer directamente en C:\CatalogoFacilV79, no dentro de carpetas de versiones anteriores.

@@ -1,0 +1,16 @@
+CATÁLOGO FÁCIL STUDIO V62
+
+Base: V61. Se conserva el código y la configuración existentes; los cambios se limitan a los controles de la sección Publicar.
+
+Cambios:
+- En la tarjeta de enlace público, el botón «Copiar enlace» ahora dice «Enviar por WhatsApp».
+- Al tocarlo, comparte el nombre del negocio, la descripción y el enlace público.
+- En navegadores compatibles con Web Share y archivos (especialmente Android), intenta adjuntar también la foto del local (logo; si no existe, usa la portada).
+- Si el navegador no permite compartir archivos, abre WhatsApp con el texto y el enlace; por limitaciones del navegador, en ese caso puede ser necesario adjuntar la foto manualmente.
+- «Descargar JSON» pasa a llamarse «Guardar respaldo» y conserva la descarga del mismo archivo JSON para restaurar o modificar el catálogo más adelante.
+- No se modificó la ventana de edición de productos ni el Worker de Cloudflare.
+
+Para publicar: subir el contenido del proyecto a GitHub y esperar a que GitHub Pages termine el despliegue. No requiere desplegar Cloudflare Worker.
+
+
+V65 - Alineacion visual solicitada: titulos centrados, descripciones reservan el mismo espacio aunque esten vacias, precios alineados y botones al mismo nivel. Aplicado al catalogo publico responsive para Windows y Android. No se restauraron archivos de versiones anteriores.

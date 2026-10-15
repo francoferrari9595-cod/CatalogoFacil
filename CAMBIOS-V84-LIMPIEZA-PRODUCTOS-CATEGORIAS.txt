@@ -1,0 +1,8 @@
+CATÁLOGO FÁCIL V84 — LIMPIEZA DE PRODUCTOS Y CATEGORÍAS VACÍAS
+
+- Se eliminan al normalizar/importar/recuperar los productos de marcador como “Nuevo producto”, “Producto nuevo”, “New product”, “Sin nombre” o “Producto” si no tienen foto, precio mayor que cero ni descripción.
+- Se conservan esos productos si tienen foto, precio mayor que cero o descripción.
+- Se eliminan las categorías vacías o de marcador como “Nueva categoría”, “Categoría nueva”, “New category” o “Sin nombre”. Los productos asociados se conservan y quedan sin categoría.
+- El catálogo público y la vista previa aplican además un filtro defensivo para no mostrar marcadores vacíos aunque lleguen datos antiguos sin normalizar.
+- La limpieza también se aplica a los datos normalizados al exportar y publicar.
+- Se conserva el resto de las funciones de la base V83.

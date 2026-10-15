@@ -1,0 +1,10 @@
+CATÁLOGO FÁCIL V77
+
+- Mejora de continuidad en el asistente Gemini: el Worker recibe el historial reciente de la conversación.
+- Respuestas ampliadas hasta 8192 tokens de salida por solicitud y aviso cuando Gemini indique que alcanzó el límite.
+- Nuevos controles: Regenerar respuesta y Continuar respuesta, además de Copiar.
+- El campo de consulta permite hacer preguntas de seguimiento sin perder el contexto reciente.
+- Se elimina Inicio de la navegación y el editor abre directamente en Productos.
+- Se conserva el botón IA de cada producto, las descripciones de producto de hasta 200 caracteres y el resto de la base V76.
+
+Para que los cambios de IA surtan efecto, actualizar publisher/worker.js en Cloudflare y hacer Deploy, conservando los secretos y bindings existentes.

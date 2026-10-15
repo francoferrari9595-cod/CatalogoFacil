@@ -1,0 +1,6 @@
+CATALOGO FACIL V81
+Base: V80, sin restaurar archivos de versiones anteriores.
+
+Corrección: se añadió el separador que faltaba entre el tema Ultravioleta y los temas personalizados. Esto evitaba que la lista de temas se interpretara como una entrada indefinida y producía el error "undefined is not iterable" al abrir Diseño.
+
+Defensa adicional: el buscador de temas ignora entradas inválidas en vez de detener toda la interfaz. El normalizador conserva los identificadores custom-* para que los temas personalizados no vuelvan a Clásico al actualizar el catálogo.

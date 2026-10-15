@@ -1,0 +1,25 @@
+CATÁLOGO FÁCIL V83 — REDISEÑO VISUAL (base V82.1)
+
+NO SE TOCARON: publicador/Worker, Cloudflare, KV, IA (GroqCloud), publicación, contraseñas, panel admin, redes ni lógica del carrito/WhatsApp.
+
+QUÉ CAMBIÓ
+1) Temas que ahora SÍ cambian el catálogo final
+   - Antes, ~100 temas por rubro (Moda, Gastronomía, etc.) solo cambiaban la miniatura del editor; el catálogo publicado se veía igual.
+   - Ahora hay un único sistema (src/themes.ts) y un único componente (src/CatalogView.tsx) que usan tanto la Vista previa como el enlace público.
+   - El acento violeta de fábrica ya no tapa los colores del tema. Si elegís un acento propio se respeta; botón "Usar el acento del tema" para volver.
+2) 36 temas Claude: 8 claros, 9 oscuros, 8 neón oscuro (Cian, Magenta, Violeta, Lima, Fuego, Eléctrico, Rosa, Esmeralda), 7 neón claro (Luz Cian, Magenta, Violeta, Lima, Coral, Azul, Menta) y 4 de cristal (Noche, Aurora, Perla, Ámbar).
+   El selector muestra solo esta colección. Los catálogos que usaban un tema anterior se siguen viendo bien y ese tema aparece como "Tema anterior · en uso".
+3) Catálogo rediseñado: portada editorial, categorías con scroll, tarjetas con animación al aparecer, carrito flotante, ventanas tipo hoja con movimiento.
+4) Zoom de fotos corregido (src/PhotoViewer.tsx): pellizco, rueda, doble toque, y ARRASTRE en cualquier dirección para ver toda la foto.
+5) Editor: nuevo diseño, ventanas y pestañas con animación, Vista previa real (móvil/computadora), Diseño con vista en vivo al costado.
+6) "by Franco Ferrari" debajo de "Catálogo Fácil".
+
+CÓMO SUBIRLO
+Extraer el ZIP en una carpeta NUEVA y ejecutar SUBIR_A_GITHUB.bat (mismo proceso y mismo repositorio que V82). No hace falta redeplegar el Worker.
+Cuando GitHub Actions termine, abrir la página con Ctrl+F5.
+
+V83.1 (CORRECCIONES ANDROID Y PULIDO)
+- Ventanas del editor (Diseño, talles y colores) aparecían muy abajo en Android: ahora se montan en la pantalla y se abren como hoja inferior completa.
+- La vista previa del celular y del catálogo ahora también se ven en Android, incluso dentro de Diseño ("Vista en vivo").
+- Barra de pestañas fija arriba en el celular, vidrio (glass), aurora animada, destellos en botones, portada con parallax, precios con filo animado.
+- Temas neón con brillo real y temas de cristal con desenfoque.

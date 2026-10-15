@@ -1,0 +1,3 @@
+Catálogo Fácil V84
+Limpieza automática de productos y categorías vacíos.
+Base: V83 recibida el 15/10/2026.

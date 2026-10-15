@@ -1,0 +1,15 @@
+CATALOGO FACIL - CAMBIOS VISUALES Y VARIANTES (BASE V58)
+
+Cambios incluidos sobre la base V58:
+1. Portada pública con imagen centrada (centro horizontal y vertical) en Windows, Android y otros tamaños de pantalla.
+2. Nombre del comercio con jerarquía visual mayor que la descripción, tanto en la portada como en el encabezado.
+3. Ampliación de foto de producto con zoom por pellizco en pantallas táctiles, además de los botones +/-, rueda y doble toque ya existentes.
+4. La configuración de talles y colores del editor se abre en una ventana modal independiente. Así, la tarjeta de edición del producto no se estira al activar variantes.
+5. Se conserva la configuración de variantes múltiples, colores personalizados, opciones de catálogo y Worker de la base.
+
+Publicación:
+- Estos cambios corresponden a GitHub Pages (frontend). Para aplicarlos, hay que publicar el proyecto en GitHub.
+- No se modificó publisher/worker.js; no hace falta desplegar el Worker para estos cambios visuales.
+- No se borró ni recreó KV ni se alteró el secreto ADMIN_KEY.
+
+Validación realizada: el TSX se pudo transpilar para validar sintaxis. La instalación de dependencias npm agotó el tiempo disponible, por lo que no se confirma una compilación Vite completa en este entorno.

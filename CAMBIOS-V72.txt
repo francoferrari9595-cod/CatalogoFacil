@@ -1,0 +1,7 @@
+CATALOGO FACIL V72
+
+Base: version V71, conservando sus cambios previos.
+
+Cambio: Gemini ya no debe limitar sus respuestas generales a 100 caracteres. Se amplió el máximo de salida del modelo y se aclaró que el límite de 100 caracteres aplica únicamente a las descripciones de producto cuando se solicitan como tales. Las respuestas, opiniones, ideas, análisis y recomendaciones pueden ser extensas.
+
+Se mantiene el límite de 100 caracteres en el campo de descripción del producto y del negocio en el editor.

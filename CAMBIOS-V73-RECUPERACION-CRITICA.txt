@@ -1,0 +1,16 @@
+CATÁLOGO FÁCIL V73 — RECUPERACIÓN DEL EDITOR Y CARGA DESDE LA NUBE
+
+Base de trabajo: V72. Se conservaron las funciones anteriores, Estudio IA con Gemini, consulta por producto, límite de 100 caracteres para las descripciones y el respaldo recuperado de Pepperina's Indumentaria.
+
+Cambios de esta versión:
+- La pantalla de error ya no deja al usuario encerrado en un botón de recarga: ofrece recuperación directa desde la nube, importación de JSON, descarga de copia local y apertura de un editor limpio.
+- La pantalla de recuperación muestra los detalles técnicos del error para poder identificar fallos posteriores.
+- Normalización más defensiva de productos: talles, colores y opciones de color se convierten en listas seguras para evitar errores al abrir catálogos antiguos.
+- Se agrega almacenamiento local IndexedDB para catálogos grandes que exceden la cuota habitual de localStorage. El inicio recupera esa copia antes de montar la interfaz.
+- La recuperación desde la nube y la importación JSON guardan el catálogo en IndexedDB antes de volver a abrir el editor.
+- “Abrir editor limpio” elimina solo el borrador local de este navegador y la copia IndexedDB; no elimina ni modifica catálogos publicados en Cloudflare.
+
+IMPORTANTE:
+- El código fuente del Worker no necesita cambios para esta corrección; se conserva el worker.js de V72 y la configuración existente.
+- No borrar el binding CATALOGS ni los secretos de Cloudflare.
+- La compilación Vite completa no pudo ejecutarse en este entorno porque npm install excedió el tiempo disponible. Se verificó que el archivo TSX transpila sin errores de sintaxis y que worker.js pasa node --check. Probar la compilación y la recuperación en GitHub Actions antes de publicar.

@@ -1,0 +1,12 @@
+CATÁLOGO FÁCIL V68 — LÍMITE DE DESCRIPCIONES
+
+Base: V67 RECUPERACIÓN DEL EDITOR. Se conserva el proyecto y sus funciones anteriores.
+
+Cambio añadido:
+- La descripción de cada producto admite hasta 100 caracteres.
+- La descripción del negocio/portada admite hasta 100 caracteres.
+- Se muestran contadores de caracteres en ambos campos.
+- La asistencia IA para descripciones de producto usa el nuevo límite de 100 caracteres.
+- Las fichas públicas muestran hasta 100 caracteres de descripción del producto.
+
+Para publicar: ejecutar SUBIR_A_GITHUB.bat y seguir sus instrucciones.

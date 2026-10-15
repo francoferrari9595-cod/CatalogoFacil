@@ -1,0 +1,28 @@
+CATÁLOGO FÁCIL STUDIO — V61
+Base: ZIP V60 recibido. Se aplicaron únicamente ajustes sobre la versión actual, sin recuperar archivos de versiones antiguas.
+
+1. PORTADA EN WINDOWS Y ESCRITORIO
+- La portada ahora renderiza la imagen en un elemento de imagen dedicado, a tamaño completo, con object-fit: cover y object-position: 50% 50%.
+- Se separa el encuadre de la imagen del contenido textual para evitar desplazamientos producidos por reglas de fondo heredadas.
+- El título del negocio conserva una jerarquía tipográfica mayor que la descripción en PC y Android.
+
+2. 50 ESTILOS NUEVOS DE TÍTULO
+- Se agregaron 50 variantes y se conservaron los estilos anteriores.
+- Están agrupadas en categorías: neón y luz, metales premium, volumen 3D, degradados y creativos, además de los clásicos.
+- Total: 66 estilos seleccionables para el título del negocio.
+
+3. ESTILOS DE PRECIO
+- Se añadió una ventana independiente «Estilo de precios» dentro de Diseño.
+- Permite elegir los mismos efectos visuales para los precios del catálogo público.
+- No se modificó la ventana de edición de productos ni sus campos.
+
+4. ZOOM DE FOTOS
+- Se conserva el visor ampliado de imágenes de producto, el zoom con botones y la interacción de pellizco en Android.
+
+5. PUBLICADOR Y CLOUDFLARE
+- No se modificó el Worker, sus secretos, sus bindings ni el almacenamiento KV.
+- Estos cambios son del frontend. Para que aparezcan en el sitio, hay que subir el proyecto a GitHub y esperar que finalice GitHub Pages; no hace falta desplegar el Worker.
+
+VALIDACIÓN
+- ZIP generado a partir del proyecto V60 recibido.
+- La instalación de dependencias no finalizó dentro del tiempo disponible; por eso no se declara una compilación Vite completa como aprobada.

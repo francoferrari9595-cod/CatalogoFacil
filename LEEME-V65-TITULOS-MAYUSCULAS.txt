@@ -1,0 +1,9 @@
+CATALOGO FACIL STUDIO - V65
+CAMBIO: TITULOS DE PRODUCTOS EN MAYUSCULAS
+
+Se conserva esta version como base y se aplica solamente el cambio solicitado.
+- Los nombres de productos existentes se normalizan a mayusculas al cargar/normalizar el catalogo.
+- Los nombres nuevos o editados se convierten a mayusculas mientras se escriben.
+- La vista publica muestra los titulos en mayusculas en Windows y Android, incluyendo catalogos publicados anteriormente.
+- Tambien se muestran en mayusculas en la lista de seleccion de productos y en el cuadro de producto.
+- No se cambian descripciones, precios, categorias, imagenes ni otras funciones.

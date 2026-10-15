@@ -1,0 +1,2 @@
+CATÁLOGO FÁCIL V82 — GROQCLOUD
+Base: V81. Reemplazo del proveedor activo de IA Gemini por GroqCloud. Se conservan los demás cambios del proyecto.

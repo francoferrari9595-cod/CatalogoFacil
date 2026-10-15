@@ -1,0 +1,12 @@
+CATÁLOGO FÁCIL V76 — ACCESO A IA DESDE CADA PRODUCTO
+
+Base: V75. Se conserva el proyecto y sus modificaciones previas.
+
+Cambios:
+- Se quitó la solapa/botón permanente “Estudio IA” de la navegación principal.
+- Cada tarjeta de producto incluye un botón ✨ IA.
+- Al tocar IA, se abre el asistente y queda seleccionado ese producto para contextualizar la consulta.
+- El usuario puede escribir libremente qué desea preguntarle a Gemini sobre el producto seleccionado.
+- Se quitó el botón “Guardar catálogo” de la fila de acciones que acompaña a “Cargar catálogo de la nube” y “Cargar catálogo”.
+- Se mantienen las funciones de exportación/respaldo disponibles en el flujo de publicación.
+- No se modificó la configuración de Cloudflare ni los secretos de Gemini.

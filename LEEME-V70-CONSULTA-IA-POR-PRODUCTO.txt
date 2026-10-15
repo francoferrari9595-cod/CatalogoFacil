@@ -1,0 +1,21 @@
+CATÁLOGO FÁCIL V70 — CONSULTA DE GEMINI POR PRODUCTO
+
+Base de trabajo: V69. Esta versión conserva las modificaciones anteriores y añade la selección opcional de un producto dentro de Estudio IA.
+
+CAMBIOS
+- En Estudio IA se puede elegir un producto del catálogo o dejar “Consulta general”.
+- Se muestra un resumen del producto elegido (categoría, precio y descripción cuando existen).
+- La pregunta sigue siendo escrita libremente por el usuario; no se agregan tareas predeterminadas ni opciones de estilo.
+- Al consultar Gemini, se envían los datos del producto seleccionado como contexto específico para que la respuesta pueda opinar sobre él, sugerir un título, describirlo, proponer promociones o contestar otra pregunta.
+- Se mantiene el cuadro de pregunta y la respuesta debajo, con la opción de copiar.
+- El Worker de Cloudflare incorpora el producto seleccionado al contexto de Gemini. Para que la función contextual opere en producción, publicar también publisher/worker.js en el Worker existente, conservando sus bindings y secretos.
+- No se incorpora ninguna clave de API al código ni al ZIP. Se conserva el uso del secreto GEMINI_API_KEY configurado en Cloudflare.
+
+PUBLICACIÓN
+1. Extraer el ZIP completo.
+2. Subir los archivos al repositorio existente, sin borrar ni reemplazar configuraciones ajenas al proyecto.
+3. Publicar el sitio mediante el flujo habitual de GitHub.
+4. Actualizar el Worker con publisher/worker.js y hacer Deploy, manteniendo CATALOGS, ADMIN_KEY y GEMINI_API_KEY.
+
+NOTA DE VERIFICACIÓN
+Se comprobó la sintaxis JavaScript del Worker. No se pudo completar la compilación de Vite en este entorno porque no se instalaron las dependencias (el proyecto no incluye package-lock.json y npm install excedió el tiempo disponible). Probar la función en la publicación final.

@@ -1,0 +1,1 @@
+V78 basada en V77: vista previa junto a Cargar catálogo, acciones visibles sin deslizar y 100 temas nuevos categorizados y buscables por nombre.

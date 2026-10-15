@@ -1,0 +1,2 @@
+CATÁLOGO FÁCIL V83 — by Franco Ferrari
+Base: V82.1 (GroqCloud). Rediseño visual completo de catálogos y editor. V83.1: Android corregido, 36 temas Claude (neón y cristal).

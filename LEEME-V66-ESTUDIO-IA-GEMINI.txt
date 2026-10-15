@@ -1,0 +1,40 @@
+CATÁLOGO FÁCIL STUDIO — V66: ESTUDIO IA CON GEMINI
+
+Esta versión parte del ZIP anterior V65 con títulos de productos en mayúsculas. Se agrega una sección “Estudio IA” para ayudar a redactar contenido con Gemini.
+
+FUNCIONES INCLUIDAS
+- Crear ideas de nombres comerciales y descripción de productos.
+- Mejorar la descripción de un producto existente.
+- Crear textos promocionales breves.
+- Ayuda general de redacción comercial.
+- Copiar el resultado.
+- Aplicar el nombre o la descripción al producto elegido; los títulos se guardan en MAYÚSCULAS y la descripción respeta el límite actual de 50 caracteres.
+- Funciona en la interfaz web adaptable a computadora y móvil.
+
+CONFIGURACIÓN
+1. Abrí https://aistudio.google.com/app/apikey e iniciá sesión con Google.
+2. Creá una clave API para Gemini. Revisá las condiciones, límites y disponibilidad del nivel gratuito de tu cuenta.
+3. Abrí Catálogo Fácil Studio y entrá en “Estudio IA”.
+4. Pegá tu propia clave, elegí la tarea, escribí qué necesitás y presioná “Generar con Gemini”.
+5. Revisá la respuesta antes de aplicar cambios.
+
+SEGURIDAD Y COSTOS
+- No se incluye ninguna clave API en este ZIP ni en el código fuente.
+- La clave se guarda en el almacenamiento local del navegador en el dispositivo donde se ingresa; no se envía a nuestro publicador. La solicitud se hace directamente a la API de Google.
+- Usá una clave personal, no la compartas y borrala desde el navegador si el dispositivo es compartido. Una clave usada desde una app web no puede considerarse completamente secreta frente a quien controla ese navegador.
+- El nivel gratuito de Gemini tiene límites y modelos disponibles sujetos a cambios; no se garantiza uso ilimitado ni gratuidad permanente. La política de datos del nivel gratuito puede permitir que el contenido enviado se use para mejorar productos de Google. Evitá enviar datos personales o confidenciales.
+- Esta integración genera texto. No genera imágenes.
+
+IMPORTANTE
+El proyecto es una aplicación Vite/React. Para verificar la compilación, en un entorno con Node.js compatible y conexión a los paquetes npm, ejecutar:
+  npm install
+  npm run build
+
+La compilación no pudo ejecutarse en el entorno de preparación porque no estaba instalado Vite/node_modules. Debe compilarse y probarse antes de publicar en GitHub Pages.
+
+ACTUALIZACIÓN DE RECUPERACIÓN DEL EDITOR (base V66)
+- Se agregó “Cargar catálogo de la nube” para recuperar el catálogo publicado desde cualquier dispositivo. Se puede pegar el slug o el enlace público; el editor carga los datos del servidor y conserva el slug para actualizar el mismo catálogo.
+- Para guardar cambios en el catálogo publicado se debe usar la contraseña original de ese catálogo. No se crea otro enlace si se carga el catálogo publicado existente.
+- Se evita que el límite de almacenamiento local del navegador interrumpa la interfaz cuando un catálogo tiene imágenes grandes. La publicación en la nube y la descarga JSON siguen disponibles.
+- Se agregó una pantalla de recuperación ante errores de interfaz para evitar que un error React deje la aplicación completamente negra.
+- Esta actualización no cambia ni elimina los datos ya guardados en el servidor; solo cambia el código del editor.
